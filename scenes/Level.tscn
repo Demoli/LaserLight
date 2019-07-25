@@ -7,12 +7,21 @@
 [node name="Level" type="Node2D"]
 
 [node name="BaseEmitter" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 171.549, 249.083 )
+position = Vector2( 70, 490 )
 
 [node name="BaseMirror" parent="." instance=ExtResource( 2 )]
-position = Vector2( 214.516, 560 )
+position = Vector2( 420, 490 )
 rotation = -1.5708
 
 [node name="Laser" parent="." instance=ExtResource( 3 )]
-position = Vector2( 70, 565 )
+position = Vector2( 105, 490 )
+
+[node name="BaseMirror2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 420, 280 )
+rotation = 1.57079
+bounce_dir = 0
+
+[node name="BaseMirror3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 630, 280 )
+rotation = -3.14159
+bounce_dir = 90
