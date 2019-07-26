@@ -22,10 +22,10 @@ rotation = 1.57079
 bounce_dir = 0
 
 [node name="BaseMirror3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 630, 280 )
+position = Vector2( 805, 280 )
 rotation = -3.14159
 bounce_dir = 90
 
 [node name="BaseMirror4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 630, 490 )
+position = Vector2( 805, 490 )
 bounce_dir = 0

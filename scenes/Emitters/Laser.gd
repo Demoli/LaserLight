@@ -18,15 +18,11 @@ func _process(delta):
 			
 			if collider is BaseMirror:
 				active_beams.remove(index)
-				var line = Line2D.new()
-				line.add_point(beam.global_position)
-				line.add_point(beam.get_collision_point())
-				line.width = 2
-				line.default_color = Color.red
-				get_node("../").add_child(line)
+				_draw_beam(beam, beam.get_collision_point())
 				bounce_beam(collider, beam.get_collision_point())
 		else:
-			break
+			pass
+			
 
 func bounce_beam(mirror : BaseMirror, collision_point : Vector2):
 	var bounce_dir = mirror.get_bounce_dir()
@@ -41,3 +37,11 @@ func bounce_beam(mirror : BaseMirror, collision_point : Vector2):
 	active_beams.append(cast)
 
 	add_child(cast)
+
+func _draw_beam(beam : RayCast2D, target):
+	var line = Line2D.new()
+	line.add_point(beam.position)
+	line.add_point(to_local(target))
+	line.width = 2
+	line.default_color = Color.red
+	add_child(line)
