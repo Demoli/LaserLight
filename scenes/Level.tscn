@@ -25,3 +25,7 @@ bounce_dir = 0
 position = Vector2( 630, 280 )
 rotation = -3.14159
 bounce_dir = 90
+
+[node name="BaseMirror4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 630, 490 )
+bounce_dir = 0
