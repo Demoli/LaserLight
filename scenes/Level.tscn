@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Emitters/BaseEmitter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Mirrors/BaseMirror.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Emitters/Laser.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Obstacles/BaseObstacle.tscn" type="PackedScene" id=4]
 
 [node name="Level" type="Node2D"]
 
@@ -29,3 +30,6 @@ bounce_dir = 90
 [node name="BaseMirror4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 805, 490 )
 bounce_dir = 0
+
+[node name="BaseObstacle" parent="." instance=ExtResource( 4 )]
+position = Vector2( 980, 420 )

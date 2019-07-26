@@ -14,15 +14,16 @@ func _process(delta):
 		var beam = active_beams[index]
 		if beam and beam.is_colliding():
 			
+			active_beams.remove(index)
+			_draw_beam(beam, beam.get_collision_point())
+			
 			var collider = beam.get_collider()
 			
 			if collider is BaseMirror:
-				active_beams.remove(index)
-				_draw_beam(beam, beam.get_collision_point())
 				bounce_beam(collider, beam.get_collision_point())
-		else:
-			pass
-			
+			else:
+				print('beam killed by ' + collider.name)
+				
 
 func bounce_beam(mirror : BaseMirror, collision_point : Vector2):
 	var bounce_dir = mirror.get_bounce_dir()
