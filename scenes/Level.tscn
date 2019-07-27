@@ -79,3 +79,43 @@ rotation = 1.57079
 [node name="BaseObstacle17" parent="OuterWalls" instance=ExtResource( 4 )]
 position = Vector2( 980, -70 )
 rotation = 1.57079
+
+[node name="InnerWalls" type="Node" parent="."]
+
+[node name="BaseObstacle" parent="InnerWalls" instance=ExtResource( 4 )]
+position = Vector2( 245, 525 )
+
+[node name="BaseObstacle10" parent="InnerWalls" instance=ExtResource( 4 )]
+position = Vector2( 945, 70 )
+rotation = 1.5708
+
+[node name="BaseObstacle2" parent="InnerWalls" instance=ExtResource( 4 )]
+position = Vector2( 245, 315 )
+
+[node name="BaseObstacle3" parent="InnerWalls" instance=ExtResource( 4 )]
+position = Vector2( 385, 245 )
+rotation = 1.5708
+
+[node name="BaseObstacle8" parent="InnerWalls" instance=ExtResource( 4 )]
+position = Vector2( 385, 245 )
+rotation = 1.5708
+
+[node name="BaseObstacle4" parent="InnerWalls" instance=ExtResource( 4 )]
+position = Vector2( 595, 245 )
+rotation = 1.5708
+
+[node name="BaseObstacle6" parent="InnerWalls" instance=ExtResource( 4 )]
+position = Vector2( 595, 245 )
+rotation = 1.5708
+
+[node name="BaseObstacle5" parent="InnerWalls" instance=ExtResource( 4 )]
+position = Vector2( 805, 245 )
+rotation = 1.5708
+
+[node name="BaseObstacle7" parent="InnerWalls" instance=ExtResource( 4 )]
+position = Vector2( 805, 245 )
+rotation = 1.5708
+
+[node name="BaseObstacle9" parent="InnerWalls" instance=ExtResource( 4 )]
+position = Vector2( 1015, 245 )
+rotation = 1.5708
