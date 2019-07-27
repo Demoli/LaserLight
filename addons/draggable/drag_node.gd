@@ -24,7 +24,7 @@ func _ready():
 
 func _process(delta):
 	if status == DRAG_STATE.DRAGGING:
-		get_parent().set_global_position(mpos)
+		get_parent().set_global_position(mpos.snapped(Vector2(35,35)))
 
 func _input(ev):
 	
