@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/Mirrors/BottomLeft.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/mirrors/bottom_left.png" type="Texture" id=2]
+[ext_resource path="res://addons/draggable/drag_node.gd" type="Script" id=3]
+[ext_resource path="res://addons/draggable/icon.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 96.7791, 10 )
@@ -16,3 +18,10 @@ texture = ExtResource( 2 )
 rotation = 0.785398
 scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 1 )
+
+[node name="Draggable" type="Node2D" parent="."]
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_icon": ExtResource( 4 )
+}
+drag_sprite = NodePath("../Sprite")

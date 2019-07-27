@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "BaseTarget",
 "language": "GDScript",
 "path": "res://scenes/targets/BaseTarget.gd"
+}, {
+"base": "Node2D",
+"class": "Draggable",
+"language": "GDScript",
+"path": "res://addons/draggable/drag_node.gd"
 } ]
 _global_script_class_icons={
 "BaseMirror": "",
 "BaseObstacle": "",
-"BaseTarget": ""
+"BaseTarget": "",
+"Draggable": ""
 }
 
 [application]
@@ -35,6 +41,10 @@ _global_script_class_icons={
 config/name="BanalPrototype"
 run/main_scene="res://scenes/Level.tscn"
 config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "draggable" )
 
 [rendering]
 
