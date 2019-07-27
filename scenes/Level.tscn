@@ -1,89 +1,75 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Obstacles/BaseObstacle.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/Emitters/BaseEmitter.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Emitters/Laser.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Mirrors/BottomLeft.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/Mirrors/BottomRight.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/Mirrors/TopLeft.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/Mirrors/TopRight.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Emitters/Laser.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Mirrors/BottomLeft.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Mirrors/BottomRight.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Mirrors/TopLeft.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Mirrors/TopRight.tscn" type="PackedScene" id=6]
 
 [node name="Level" type="Node2D"]
 
-[node name="BaseObstacle" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 0, 140 )
-
 [node name="BaseObstacle4" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 0, 280 )
+position = Vector2( -70, 140 )
 
 [node name="BaseObstacle6" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 0, 490 )
+position = Vector2( -70, 420 )
+
+[node name="BaseObstacle15" parent="." instance=ExtResource( 1 )]
+position = Vector2( -70, 700 )
 
 [node name="BaseObstacle2" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 1015, 140 )
+position = Vector2( 1120, 140 )
 
 [node name="BaseObstacle5" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 1015, 420 )
+position = Vector2( 1120, 420 )
+
+[node name="BaseObstacle14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1120, 700 )
 
 [node name="BaseObstacle3" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 910, 630 )
+position = Vector2( 910, 700 )
 rotation = 1.57079
 
 [node name="BaseObstacle11" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 630, 630 )
+position = Vector2( 630, 700 )
 rotation = 1.57079
 
 [node name="BaseObstacle12" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 350, 630 )
+position = Vector2( 350, 700 )
 rotation = 1.57079
 
 [node name="BaseObstacle13" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 70, 630 )
+position = Vector2( 70, 700 )
 rotation = 1.57079
 
 [node name="BaseObstacle7" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 70, 0 )
+position = Vector2( 70, -70 )
 rotation = 1.57079
 
 [node name="BaseObstacle8" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 350, 0 )
+position = Vector2( 350, -70 )
 rotation = 1.57079
 
 [node name="BaseObstacle9" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 630, 0 )
+position = Vector2( 630, -70 )
 rotation = 1.57079
 
 [node name="BaseObstacle10" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 910, 0 )
+position = Vector2( 910, -70 )
 rotation = 1.57079
 
-[node name="BaseEmitter" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0, 490 )
+[node name="Laser" parent="." instance=ExtResource( 2 )]
+position = Vector2( 35, 490 )
 
-[node name="Laser" parent="." instance=ExtResource( 3 )]
-position = Vector2( 140, 490 )
-
-[node name="BottomLeft" parent="." instance=ExtResource( 4 )]
+[node name="BottomLeft" parent="." instance=ExtResource( 3 )]
 position = Vector2( 595, 390 )
 
-[node name="BottomRight2" parent="." instance=ExtResource( 5 )]
+[node name="BottomRight2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 350, 490 )
 
-[node name="TopLeft" parent="." instance=ExtResource( 6 )]
+[node name="TopLeft" parent="." instance=ExtResource( 5 )]
 position = Vector2( 350, 210 )
 
-[node name="TopRight" parent="." instance=ExtResource( 7 )]
+[node name="TopRight" parent="." instance=ExtResource( 6 )]
 position = Vector2( 595, 210 )
