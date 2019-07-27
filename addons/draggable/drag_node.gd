@@ -27,6 +27,10 @@ func _process(delta):
 		get_parent().set_global_position(mpos)
 
 func _input(ev):
+	
+	if not ev is InputEventMouse and not ev is InputEventMouseButton:
+		return
+	
 	if ev is InputEventMouse and ev.is_pressed() and ev.button_mask == BUTTON_LEFT  and status != DRAG_STATE.DRAGGING:
 		var evpos=ev.global_position
 		var gpos=get_global_position()
@@ -47,5 +51,5 @@ func _input(ev):
 	if ev is InputEventMouseButton and not ev.is_pressed():
 		status = DRAG_STATE.NOT_DRAGGING
 		emit_signal("drag_end")
-
+	
 	mpos=ev.global_position

@@ -1,6 +1,6 @@
 extends Node2D
 
-export var cast_length = 500
+export var cast_length = 1000
 export var color = Color.red
 
 onready var active_beams = [
@@ -8,6 +8,7 @@ onready var active_beams = [
 ]
 
 func _ready():
+	set_process(false)
 	pass # Replace with function body.
 
 func _process(delta):
@@ -53,3 +54,7 @@ func _draw_beam(beam : RayCast2D, target):
 	line.width = 2
 	line.default_color = color
 	add_child(line)
+	
+func _input(event):
+	if Input.is_action_pressed("laser_fire"):
+		set_process(true)
