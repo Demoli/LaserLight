@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "Draggable",
 "language": "GDScript",
 "path": "res://addons/draggable/drag_node.gd"
+}, {
+"base": "TileMap",
+"class": "LevelTilemap",
+"language": "GDScript",
+"path": "res://scenes/LevelTilemaps/LevelTilemap.gd"
 } ]
 _global_script_class_icons={
 "BaseMirror": "",
 "BaseObstacle": "",
 "BaseTarget": "",
-"Draggable": ""
+"Draggable": "",
+"LevelTilemap": ""
 }
 
 [application]

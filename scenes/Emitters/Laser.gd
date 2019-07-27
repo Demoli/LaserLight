@@ -26,7 +26,7 @@ func _process(delta):
 				bounce_beam(collider, beam.get_collision_point(), beam)
 			if collider is BaseTarget and collider.color == color:
 				print('beam reached targeet ' + collider.name)
-			if collider is BaseObstacle:
+			if collider is LevelTilemap or collider is BaseObstacle:
 				print('beam killed by ' + collider.name)
 				
 

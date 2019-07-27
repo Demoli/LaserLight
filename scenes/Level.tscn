@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/Emitters/Laser.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/targets/BaseTarget.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/gui/Toolbox.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Obstacles/BaseObstacle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/LevelTilemaps/LevelTilemap.tscn" type="PackedScene" id=4]
 
 [node name="Level" type="Node2D"]
 
@@ -19,103 +19,5 @@ margin_top = 0.0
 margin_right = 70.0
 margin_bottom = 70.0
 
-[node name="OuterWalls" type="Node" parent="."]
-editor/display_folded = true
-
-[node name="BaseObstacle4" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( -70, 105 )
-
-[node name="BaseObstacle6" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( -70, 310 )
-
-[node name="BaseObstacle15" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( -70, 525 )
-
-[node name="BaseObstacle2" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( 1085, 105 )
-
-[node name="BaseObstacle5" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( 1085, 315 )
-
-[node name="BaseObstacle14" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( 1085, 525 )
-
-[node name="BaseObstacle3" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( 980, 700 )
-rotation = 1.57079
-
-[node name="BaseObstacle11" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( 770, 700 )
-rotation = 1.57079
-
-[node name="BaseObstacle12" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( 560, 700 )
-rotation = 1.57079
-
-[node name="BaseObstacle16" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( 140, 700 )
-rotation = 1.57079
-
-[node name="BaseObstacle13" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( 350, 700 )
-rotation = 1.57079
-
-[node name="BaseObstacle7" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( 140, -70 )
-rotation = 1.57079
-
-[node name="BaseObstacle8" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( 350, -70 )
-rotation = 1.57079
-
-[node name="BaseObstacle9" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( 560, -70 )
-rotation = 1.57079
-
-[node name="BaseObstacle10" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( 770, -70 )
-rotation = 1.57079
-
-[node name="BaseObstacle17" parent="OuterWalls" instance=ExtResource( 4 )]
-position = Vector2( 980, -70 )
-rotation = 1.57079
-
-[node name="InnerWalls" type="Node" parent="."]
-
-[node name="BaseObstacle" parent="InnerWalls" instance=ExtResource( 4 )]
-position = Vector2( 245, 525 )
-
-[node name="BaseObstacle10" parent="InnerWalls" instance=ExtResource( 4 )]
-position = Vector2( 945, 70 )
-rotation = 1.5708
-
-[node name="BaseObstacle2" parent="InnerWalls" instance=ExtResource( 4 )]
-position = Vector2( 245, 315 )
-
-[node name="BaseObstacle3" parent="InnerWalls" instance=ExtResource( 4 )]
-position = Vector2( 385, 245 )
-rotation = 1.5708
-
-[node name="BaseObstacle8" parent="InnerWalls" instance=ExtResource( 4 )]
-position = Vector2( 385, 245 )
-rotation = 1.5708
-
-[node name="BaseObstacle4" parent="InnerWalls" instance=ExtResource( 4 )]
-position = Vector2( 595, 245 )
-rotation = 1.5708
-
-[node name="BaseObstacle6" parent="InnerWalls" instance=ExtResource( 4 )]
-position = Vector2( 595, 245 )
-rotation = 1.5708
-
-[node name="BaseObstacle5" parent="InnerWalls" instance=ExtResource( 4 )]
-position = Vector2( 805, 245 )
-rotation = 1.5708
-
-[node name="BaseObstacle7" parent="InnerWalls" instance=ExtResource( 4 )]
-position = Vector2( 805, 245 )
-rotation = 1.5708
-
-[node name="BaseObstacle9" parent="InnerWalls" instance=ExtResource( 4 )]
-position = Vector2( 1015, 245 )
-rotation = 1.5708
+[node name="LevelTilemap" parent="." instance=ExtResource( 4 )]
+tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, 65535, 0, 0, 4, 0, 0, 12, 0, 0, 15, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65548, 0, 0, 65551, 0, 0, 196607, 0, 0, 131084, 0, 0, 131087, 0, 0, 262143, 0, 0, 196614, 0, 0, 196620, 0, 0, 196623, 0, 0, 327679, 0, 0, 262150, 0, 0, 262156, 0, 0, 262159, 0, 0, 393215, 0, 0, 327683, 0, 0, 327686, 0, 0, 327692, 0, 0, 327695, 0, 0, 458751, 0, 0, 393219, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393231, 0, 0, 524287, 0, 0, 458755, 0, 0, 458767, 0, 0, 589823, 0, 0, 524291, 0, 0, 524303, 0, 0, 655359, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
