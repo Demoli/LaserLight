@@ -8,24 +8,30 @@
 [node name="Level" type="Node2D"]
 
 [node name="BaseEmitter" parent="." instance=ExtResource( 1 )]
-position = Vector2( 70, 490 )
+position = Vector2( 0, 490 )
 
 [node name="BaseMirror" parent="." instance=ExtResource( 2 )]
-position = Vector2( 560, 490 )
+position = Vector2( 350, 490 )
 rotation = -1.5708
 
+[node name="BaseMirror5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 630, 350 )
+rotation = -1.5708
+scale = Vector2( 1, -1 )
+
 [node name="Laser" parent="." instance=ExtResource( 3 )]
-position = Vector2( 105, 490 )
+position = Vector2( 280, 490 )
 
 [node name="BaseMirror2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 560, 140 )
-rotation = 1.57079
+position = Vector2( 350, 140 )
+rotation = 1.5708
 bounce_dir = 0
 
 [node name="BaseMirror3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 35, 70 )
-rotation = -3.14159
-bounce_dir = 90
+position = Vector2( 630, 140 )
+rotation = 1.5708
+scale = Vector2( 1, -1 )
+bounce_dir = 0
 
 [node name="BaseMirror4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 35, 210 )
@@ -34,5 +40,18 @@ bounce_dir = 0
 [node name="BaseObstacle" parent="." instance=ExtResource( 4 )]
 position = Vector2( 140, 140 )
 
+[node name="BaseObstacle4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 140, 280 )
+
+[node name="BaseObstacle6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 140, 490 )
+
 [node name="BaseObstacle2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 840, 140 )
+position = Vector2( 980, 140 )
+
+[node name="BaseObstacle5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 980, 420 )
+
+[node name="BaseObstacle3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 700, 525 )
+rotation = 1.57079

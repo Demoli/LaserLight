@@ -20,16 +20,20 @@ func _process(delta):
 			var collider = beam.get_collider()
 			
 			if collider is BaseMirror:
-				bounce_beam(collider, beam.get_collision_point())
+				bounce_beam(collider, beam.get_collision_point(), beam)
 			else:
 				print('beam killed by ' + collider.name)
 				
 
-func bounce_beam(mirror : BaseMirror, collision_point : Vector2):
-	var bounce_dir = mirror.get_bounce_dir()
+func bounce_beam(mirror : BaseMirror, collision_point : Vector2, beam : RayCast2D):
+	var collision_direction = to_global(beam.position).direction_to(collision_point)
+	var cast_direction = collision_direction.rotated(mirror.rotation)
+	
+	if mirror.global_position.x < global_position.x:
+		cast_direction *= -1
+
 	var cast = RayCast2D.new()
-	cast.cast_to = Vector2(cast_length, 0)
-	cast.rotation_degrees = bounce_dir
+	cast.cast_to = Vector2(cast_length, cast_length) * cast_direction
 	cast.collide_with_areas = true
 	cast.enabled = true
 	cast.global_position = collision_point - global_position
