@@ -27,7 +27,7 @@ func _process(delta):
 
 func bounce_beam(mirror : BaseMirror, collision_point : Vector2, beam : RayCast2D):
 	var collision_direction = to_global(beam.position).direction_to(collision_point)
-	var cast_direction = collision_direction.rotated(mirror.rotation)
+	var cast_direction = collision_direction.rotated(deg2rad(mirror.bounce_dir))
 	
 	if mirror.global_position.x < global_position.x:
 		cast_direction *= -1
