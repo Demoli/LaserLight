@@ -1,12 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Obstacles/BaseObstacle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Emitters/Laser.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Mirrors/BottomLeft.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Mirrors/BottomRight.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/Mirrors/TopLeft.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/Mirrors/TopRight.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/targets/BaseTarget.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/targets/BaseTarget.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/gui/Toolbox.tscn" type="PackedScene" id=4]
 
 [node name="Level" type="Node2D"]
 
@@ -61,28 +58,13 @@ position = Vector2( 910, -70 )
 rotation = 1.57079
 
 [node name="Laser" parent="." instance=ExtResource( 2 )]
-position = Vector2( 35, 490 )
+position = Vector2( 35, 560 )
 
-[node name="BottomLeft" parent="." instance=ExtResource( 3 )]
-position = Vector2( 595, 390 )
+[node name="BaseTarget" parent="." instance=ExtResource( 3 )]
+position = Vector2( 980, 140 )
 
-[node name="BottomRight2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 350, 490 )
-
-[node name="BottomRight3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 770, 390 )
-
-[node name="TopLeft" parent="." instance=ExtResource( 5 )]
-position = Vector2( 350, 210 )
-
-[node name="TopLeft2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 770, 210 )
-
-[node name="TopRight" parent="." instance=ExtResource( 6 )]
-position = Vector2( 595, 210 )
-
-[node name="TopRight2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 910, 210 )
-
-[node name="BaseTarget" parent="." instance=ExtResource( 7 )]
-position = Vector2( 910, 390 )
+[node name="Toolbox" parent="." instance=ExtResource( 4 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 70.0
+margin_bottom = 70.0

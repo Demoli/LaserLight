@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/images/mirrors/bottom_left.png" type="Texture" id=1]
+[ext_resource path="res://scenes/gui/ToolButton.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Mirrors/BottomLeft.tscn" type="PackedScene" id=3]
+
+[node name="ToolButton" type="TextureButton"]
+texture_normal = ExtResource( 1 )
+script = ExtResource( 2 )
+spawn = ExtResource( 3 )
+[connection signal="pressed" from="." to="." method="_on_ToolButton_pressed"]

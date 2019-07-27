@@ -3,6 +3,7 @@ extends Node2D
 
 class_name Draggable
 
+signal drag_clicked
 signal drag_start
 signal drag_end
 
@@ -43,6 +44,7 @@ func _input(ev):
 		
 		if spriterect.has_point(evpos):
 			status = DRAG_STATE.CLICKED
+			emit_signal("drag_clicked")
 
 	if status==DRAG_STATE.CLICKED:
 		status = DRAG_STATE.DRAGGING

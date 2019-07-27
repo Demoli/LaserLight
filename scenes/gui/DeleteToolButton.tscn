@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/images/icons/rubbish-bin.png" type="Texture" id=1]
+[ext_resource path="res://scenes/gui/DeleteToolButton.gd" type="Script" id=2]
+
+[node name="DeleteToolButton" type="TextureButton"]
+texture_normal = ExtResource( 1 )
+script = ExtResource( 2 )
+[connection signal="focus_entered" from="." to="." method="_on_DeleteToolButton_focus_entered"]

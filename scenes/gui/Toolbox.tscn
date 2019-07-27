@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/gui/ToolButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/images/mirrors/tep_left.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Mirrors/TopLeft.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/images/mirrors/bottom_right.png" type="Texture" id=4]
+[ext_resource path="res://scenes/Mirrors/BottomRight.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/images/mirrors/top_right.png" type="Texture" id=6]
+[ext_resource path="res://scenes/Mirrors/TopRight.tscn" type="PackedScene" id=7]
+
+[node name="Toolbox" type="MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 292.0
+margin_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="TopLeft" parent="HBoxContainer" instance=ExtResource( 1 )]
+margin_right = 70.0
+margin_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource( 2 )
+spawn = ExtResource( 3 )
+
+[node name="BottomRight" parent="HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 74.0
+margin_right = 144.0
+margin_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource( 4 )
+spawn = ExtResource( 5 )
+
+[node name="TopRight" parent="HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 148.0
+margin_right = 218.0
+margin_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource( 6 )
+spawn = ExtResource( 7 )
+
+[node name="BottomLeft" parent="HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 222.0
+margin_right = 292.0
+margin_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
