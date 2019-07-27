@@ -13,9 +13,21 @@ _global_script_classes=[ {
 "class": "BaseMirror",
 "language": "GDScript",
 "path": "res://scenes/Mirrors/BaseMirror.gd"
+}, {
+"base": "Area2D",
+"class": "BaseObstacle",
+"language": "GDScript",
+"path": "res://scenes/Obstacles/BaseObstacle.gd"
+}, {
+"base": "Area2D",
+"class": "BaseTarget",
+"language": "GDScript",
+"path": "res://scenes/targets/BaseTarget.gd"
 } ]
 _global_script_class_icons={
-"BaseMirror": ""
+"BaseMirror": "",
+"BaseObstacle": "",
+"BaseTarget": ""
 }
 
 [application]

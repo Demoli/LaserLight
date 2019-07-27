@@ -1,12 +1,12 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://scenes/Obstacles/BaseObstacle.gd" type="Script" id=1]
-[ext_resource path="res://assets/images/obstacles/wall.png" type="Texture" id=2]
+[ext_resource path="res://scenes/targets/BaseTarget.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/targets/red_target.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 70, 140 )
+extents = Vector2( 36.6386, 38.144 )
 
-[node name="BaseObstacle" type="Area2D"]
+[node name="BaseTarget" type="Area2D"]
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]

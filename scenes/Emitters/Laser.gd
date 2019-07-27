@@ -1,6 +1,7 @@
 extends Node2D
 
-var cast_length = 500
+export var cast_length = 500
+export var color = Color.red
 
 onready var active_beams = [
 	$FirstBeam
@@ -21,7 +22,9 @@ func _process(delta):
 			
 			if collider is BaseMirror:
 				bounce_beam(collider, beam.get_collision_point(), beam)
-			else:
+			if collider is BaseTarget and collider.color == color:
+				print('beam reached targeet ' + collider.name)
+			if collider is BaseObstacle:
 				print('beam killed by ' + collider.name)
 				
 
@@ -48,5 +51,5 @@ func _draw_beam(beam : RayCast2D, target):
 	line.add_point(beam.position)
 	line.add_point(to_local(target))
 	line.width = 2
-	line.default_color = Color.red
+	line.default_color = color
 	add_child(line)
