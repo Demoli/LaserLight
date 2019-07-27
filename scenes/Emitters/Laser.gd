@@ -9,6 +9,7 @@ onready var active_beams = [
 
 func _ready():
 	set_process(false)
+	modulate = color
 	pass # Replace with function body.
 
 func _process(delta):
