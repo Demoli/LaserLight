@@ -8,6 +8,6 @@ func _ready():
 
 func _on_ToolButton_pressed():
 	var scene = spawn.instance()
-	get_node("/root/Level").add_child(scene)
+	get_node("/root/Application/Level").add_child(scene)
 	scene.get_node("Draggable").status = Draggable.DRAG_STATE.DRAGGING
 	scene.global_position = get_global_mouse_position()
