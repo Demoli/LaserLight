@@ -21,15 +21,21 @@ func _process(delta):
 		if beam and beam.is_colliding():
 			
 			active_beams.remove(index)
-			_draw_beam(beam, beam.get_collision_point())
-			
 			var collider = beam.get_collider()
 			
+			_draw_beam(beam.position, beam.get_collision_point())
+	
 			if collider is BaseMirror:
+				# complete the beam as collider is not at position 0
+				_draw_beam(to_local(collider.position), beam.get_collision_point())
+				# bounce beam to next target
 				bounce_beam(collider, beam.get_collision_point(), beam)
 			if collider is Splitter:
 				split_beam(collider, beam.get_collision_point(), beam)
 			if collider is BaseTarget and collider.color == color:
+				# complete the beam as collider is not at position 0
+				_draw_beam(to_local(collider.position), beam.get_collision_point())
+				_draw_beam(to_local(collider.position), beam.get_collision_point())
 				print('beam reached targeet ' + collider.name)
 			if collider is LevelTilemap or collider is BaseObstacle:
 				print('beam killed by ' + collider.name)
@@ -65,10 +71,10 @@ func _create_beam(initial_position : Vector2, cast_direction : Vector2, exceptio
 
 	add_child(cast)	
 
-func _draw_beam(beam : RayCast2D, target):
+func _draw_beam(from : Vector2, target : Vector2):
 	var line = Line2D.new()
 	line.add_to_group("beam_lines")
-	line.add_point(beam.position)
+	line.add_point(from)
 	line.add_point(to_local(target))
 	line.width = 2
 	line.default_color = color
