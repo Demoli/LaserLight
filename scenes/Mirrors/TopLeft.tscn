@@ -21,13 +21,13 @@ __meta__ = {
 }
 drag_sprite = NodePath("../Sprite")
 
-[node name="InvertedEntry" type="CollisionShape2D" parent="."]
+[node name="FacingEntry" type="CollisionShape2D" parent="."]
 position = Vector2( -0.0908306, 33.819 )
 rotation = 1.5708
 scale = Vector2( -1.05901, -0.821416 )
 shape = SubResource( 1 )
 
-[node name="FacingEntry" type="CollisionShape2D" parent="."]
+[node name="InvertedEntry" type="CollisionShape2D" parent="."]
 position = Vector2( 33.1175, 0.312675 )
 scale = Vector2( -1.04831, -0.813113 )
 shape = SubResource( 1 )

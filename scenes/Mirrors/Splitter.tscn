@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/Mirrors/Splitter.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/mirrors/splitter.png" type="Texture" id=2]
+[ext_resource path="res://addons/draggable/drag_node.gd" type="Script" id=3]
+[ext_resource path="res://addons/draggable/icon.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3.73637, 71.0923 )
@@ -16,3 +18,10 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -31.631, 0.90374 )
 shape = SubResource( 1 )
+
+[node name="Draggable" type="Node2D" parent="."]
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_icon": ExtResource( 4 )
+}
+drag_sprite = NodePath("../Sprite")
