@@ -12,29 +12,28 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-anchor_top = 0.817
-anchor_right = 1.0
+[node name="PanelContainer" type="PanelContainer" parent="."]
 anchor_bottom = 1.0
-margin_left = 20.0
-margin_top = 21.8
-margin_bottom = -18.0
+margin_right = 84.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 77.0
+margin_bottom = 993.0
 grow_horizontal = 2
 grow_vertical = 2
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
-margin_right = 1580.0
-margin_bottom = 143.0
-grow_horizontal = 2
-grow_vertical = 2
-columns = 4
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+margin_right = 70.0
+margin_bottom = 986.0
 
-[node name="TopLeft" parent="MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_right = 392.0
-margin_bottom = 143.0
+[node name="TopLeft" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 70.0
+margin_bottom = 243.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -42,10 +41,10 @@ size_flags_vertical = 3
 texture_normal = ExtResource( 2 )
 spawn = ExtResource( 3 )
 
-[node name="BottomRight" parent="MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 396.0
-margin_right = 788.0
-margin_bottom = 143.0
+[node name="BottomRight" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 247.0
+margin_right = 70.0
+margin_bottom = 490.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -53,22 +52,22 @@ size_flags_vertical = 3
 texture_normal = ExtResource( 4 )
 spawn = ExtResource( 5 )
 
-[node name="BottomLeft" parent="MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 792.0
-margin_right = 1184.0
-margin_bottom = 143.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="TopRight" parent="MarginContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 1188.0
-margin_right = 1580.0
-margin_bottom = 143.0
+[node name="TopRight" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 494.0
+margin_right = 70.0
+margin_bottom = 737.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 6 )
 spawn = ExtResource( 7 )
+
+[node name="BottomLeft" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 741.0
+margin_right = 70.0
+margin_bottom = 986.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
