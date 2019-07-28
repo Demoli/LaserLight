@@ -33,13 +33,19 @@ _global_script_classes=[ {
 "class": "LevelTilemap",
 "language": "GDScript",
 "path": "res://scenes/LevelTilemaps/LevelTilemap.gd"
+}, {
+"base": "Area2D",
+"class": "Splitter",
+"language": "GDScript",
+"path": "res://scenes/Mirrors/Splitter.gd"
 } ]
 _global_script_class_icons={
 "BaseMirror": "",
 "BaseObstacle": "",
 "BaseTarget": "",
 "Draggable": "",
-"LevelTilemap": ""
+"LevelTilemap": "",
+"Splitter": ""
 }
 
 [application]
