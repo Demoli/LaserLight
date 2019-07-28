@@ -38,6 +38,7 @@ func bounce_beam(mirror : BaseMirror, collision_point : Vector2, beam : RayCast2
 		cast_direction *= -1
 
 	var cast = RayCast2D.new()
+	cast.add_to_group("beam_casts")
 	cast.cast_to = Vector2(cast_length, cast_length) * cast_direction
 	cast.collide_with_areas = true
 	cast.enabled = true
@@ -50,6 +51,7 @@ func bounce_beam(mirror : BaseMirror, collision_point : Vector2, beam : RayCast2
 
 func _draw_beam(beam : RayCast2D, target):
 	var line = Line2D.new()
+	line.add_to_group("beam_lines")
 	line.add_point(beam.position)
 	line.add_point(to_local(target))
 	line.width = 2
@@ -59,3 +61,18 @@ func _draw_beam(beam : RayCast2D, target):
 func _input(event):
 	if Input.is_action_pressed("laser_fire"):
 		set_process(true)
+	if Input.is_action_pressed("reset_laser"):
+		reset()
+		
+func reset():
+	var objects = get_tree().get_nodes_in_group("beam_casts")
+	objects += get_tree().get_nodes_in_group("beam_lines")
+	
+	for object in objects:
+		object.queue_free()
+		
+	active_beams = [
+		$FirstBeam
+	]
+	
+	set_process(false)
