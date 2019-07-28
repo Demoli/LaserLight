@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/gui/GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/gui/DeleteToolButton.tscn" type="PackedScene" id=3]
 
 [node name="Application" type="Node2D"]
 
@@ -14,3 +15,6 @@ margin_top = 280.0
 margin_right = 70.0
 margin_bottom = 880.0
 rect_min_size = Vector2( 70, 600 )
+
+[node name="DeleteToolButton" parent="." instance=ExtResource( 3 )]
+position = Vector2( 51.551, 930.783 )
