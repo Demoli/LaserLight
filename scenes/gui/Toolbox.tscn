@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/gui/ToolButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/images/mirrors/tep_left.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/Mirrors/BottomRight.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/images/mirrors/top_right.png" type="Texture" id=6]
 [ext_resource path="res://scenes/Mirrors/TopRight.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/gui/DeleteToolButton.tscn" type="PackedScene" id=8]
 
 [node name="Toolbox" type="Control"]
 anchor_bottom = 1.0
@@ -28,13 +29,12 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
-editor/display_folded = true
 margin_right = 70.0
 margin_bottom = 986.0
 
 [node name="TopLeft" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
 margin_right = 70.0
-margin_bottom = 243.0
+margin_bottom = 194.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -43,9 +43,9 @@ texture_normal = ExtResource( 2 )
 spawn = ExtResource( 3 )
 
 [node name="BottomRight" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 247.0
+margin_top = 198.0
 margin_right = 70.0
-margin_bottom = 490.0
+margin_bottom = 392.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -54,9 +54,9 @@ texture_normal = ExtResource( 4 )
 spawn = ExtResource( 5 )
 
 [node name="TopRight" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 494.0
+margin_top = 396.0
 margin_right = 70.0
-margin_bottom = 737.0
+margin_bottom = 590.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -65,10 +65,21 @@ texture_normal = ExtResource( 6 )
 spawn = ExtResource( 7 )
 
 [node name="BottomLeft" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 741.0
+margin_top = 594.0
 margin_right = 70.0
-margin_bottom = 986.0
+margin_bottom = 788.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer"]
+margin_right = 70.0
+margin_bottom = 70.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DeleteToolButton" parent="PanelContainer/MarginContainer/VBoxContainer/Control" instance=ExtResource( 8 )]
+position = Vector2( 35, 35 )
