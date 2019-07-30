@@ -1,0 +1,20 @@
+[gd_scene format=2]
+
+[node name="LevelComplete" type="AcceptDialog"]
+visible = true
+margin_right = 1600.0
+margin_bottom = 1000.0
+window_title = "Congratulations"
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -632.549
+margin_top = -127.587
+margin_right = -522.549
+margin_bottom = -113.587
+rect_scale = Vector2( 12.0884, 12.0884 )
+text = "Level Complete!"
+align = 1

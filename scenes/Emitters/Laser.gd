@@ -30,13 +30,18 @@ func _process(delta):
 				_draw_beam(to_local(collider.position), beam.get_collision_point())
 				# bounce beam to next target
 				bounce_beam(collider, beam.get_collision_point(), beam)
+				
 			if collider is Splitter:
 				split_beam(collider, beam.get_collision_point(), beam)
+				
 			if collider is BaseTarget and collider.color == color:
 				# complete the beam as collider is not at position 0
 				_draw_beam(to_local(collider.position), beam.get_collision_point())
 				_draw_beam(to_local(collider.position), beam.get_collision_point())
+				collider.is_hit = true
+				
 				print('beam reached targeet ' + collider.name)
+				
 			if collider is LevelTilemap or collider is BaseObstacle:
 				print('beam killed by ' + collider.name)
 				
