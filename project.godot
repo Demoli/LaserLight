@@ -25,6 +25,11 @@ _global_script_classes=[ {
 "path": "res://scenes/targets/BaseTarget.gd"
 }, {
 "base": "Node2D",
+"class": "Combiner",
+"language": "GDScript",
+"path": "res://scenes/Emitters/Combiner.gd"
+}, {
+"base": "Node2D",
 "class": "Draggable",
 "language": "GDScript",
 "path": "res://addons/draggable/drag_node.gd"
@@ -43,6 +48,7 @@ _global_script_class_icons={
 "BaseMirror": "",
 "BaseObstacle": "",
 "BaseTarget": "",
+"Combiner": "",
 "Draggable": "",
 "LevelTilemap": "",
 "Splitter": ""

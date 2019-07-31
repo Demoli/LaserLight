@@ -3,6 +3,8 @@ extends Node2D
 export var cast_length = 1000
 export var color = Color.red
 
+var can_fire = true
+
 onready var active_beams = [
 	$FirstBeam
 ]
@@ -33,7 +35,12 @@ func _process(delta):
 				
 			if collider is Splitter:
 				split_beam(collider, beam.get_collision_point(), beam)
-				
+			
+			if collider.get_parent().has_method("combine_beams"):
+				collider = collider.get_parent()
+				collider.add_colliding_laser(self)
+				collider.combine_beams()
+			
 			if collider is BaseTarget and collider.color == color:
 				# complete the beam as collider is not at position 0
 				_draw_beam(to_local(collider.position), beam.get_collision_point())
@@ -77,16 +84,20 @@ func _create_beam(initial_position : Vector2, cast_direction : Vector2, exceptio
 	add_child(cast)	
 
 func _draw_beam(from : Vector2, target : Vector2):
+	
+	if name == 'Combiner':
+		pass
+	
 	var line = Line2D.new()
 	line.add_to_group("beam_lines")
 	line.add_point(from)
 	line.add_point(to_local(target))
 	line.width = 2
-	line.default_color = color
+	line.default_color = self.color
 	add_child(line)
 	
 func _input(event):
-	if Input.is_action_pressed("laser_fire"):
+	if can_fire and Input.is_action_pressed("laser_fire"):
 		set_process(true)
 	if Input.is_action_pressed("reset_laser"):
 		reset()
