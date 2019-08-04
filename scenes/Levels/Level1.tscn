@@ -23,3 +23,4 @@ tile_data = PoolIntArray( -131085, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 
 [node name="Combiner" parent="." instance=ExtResource( 4 )]
 position = Vector2( 806.87, 394.182 )
 scale = Vector2( 1.4, 1.4 )
+color = Color( 1, 1, 0, 1 )
